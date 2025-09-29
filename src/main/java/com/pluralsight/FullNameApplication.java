@@ -22,7 +22,6 @@ public class FullNameApplication {
         middleName = middleName.trim();
         System.out.print("(Optional) Please enter your suffix: ");
         nameSuffix = keyboard.nextLine();
-        // need an if statement for if nameSuffix has content, ", " is added to the beginning of the variable
         nameSuffix = nameSuffix.trim();
 
         if (middleName.isEmpty() && lastName.isEmpty()) {
@@ -36,9 +35,14 @@ public class FullNameApplication {
         else if (middleName.isEmpty()) {
             System.out.printf("Your full name is: %s %s, %s", firstName, lastName, nameSuffix);
         } // if middleName is empty
-        else {
+
+        else if (firstName.isEmpty() || lastName.isEmpty()){
             System.out.println("You did not enter your first and/or last name!");
-        }
+        } // if no input is given for the first OR last names
+
+        else {
+            System.out.printf("Your full name is: %s %s %s %s", firstName, middleName, lastName, nameSuffix);
+        } // full output when every variable is given an input
 
     }
 }
