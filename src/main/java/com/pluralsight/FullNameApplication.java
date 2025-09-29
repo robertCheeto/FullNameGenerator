@@ -25,15 +25,15 @@ public class FullNameApplication {
         nameSuffix = nameSuffix.trim();
 
         if (middleName.isEmpty() && lastName.isEmpty()) {
-            System.out.printf("\nYour full name is: %s %s", firstName, lastName);
+            System.out.printf("\nYour full name is:%s %s", firstName, lastName);
         } // if middleName and suffix are empty
 
         else if (nameSuffix.isEmpty()) {
-            System.out.printf("Your full name is: %s %s %s", firstName, middleName, lastName);
+            System.out.printf("Your full name is:%s %s %s", firstName, middleName, lastName);
         } // if suffix is empty
 
         else if (middleName.isEmpty()) {
-            System.out.printf("Your full name is: %s %s, %s", firstName, lastName, nameSuffix);
+            System.out.printf("Your full name is:%s %s, %s", firstName, lastName, nameSuffix);
         } // if middleName is empty
 
         else if (firstName.isEmpty() || lastName.isEmpty()){
@@ -41,7 +41,7 @@ public class FullNameApplication {
         } // if no input is given for the first OR last names
 
         else {
-            System.out.printf("Your full name is: %s %s %s %s", firstName, middleName, lastName, nameSuffix);
+            System.out.printf("Your full name is:%s %s %s, %s", firstName, middleName, lastName, nameSuffix);
         } // full output when every variable is given an input
 
     }
